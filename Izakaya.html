@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou|Cinzel' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #000 url("https://kid101.com/wp-content/uploads/2017/03/cherry-blossoms-houston.jpg");
+  background-size: 3000px;
+}
+div {
+  height: 400px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #c6063;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #fc0035;
+  margin: 0px 0 70px 0;
+  font-family: 'Cinzel', cursive;
+}
+p {
+  color: rgba(255,101,236,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(255,0,0,.9), rgba(0,0,0,.9));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 30px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 20px;
+  transition: height .3s;
+  -webkit-transition: height .3s;
+  -moz-transition: height .3s;
+}
+small {
+  color: #D65B9D;
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+}
+.price {
+  float: right;
+}
+
+@media (max-width:500px) { 
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    height: 30px;
+  }
+  small {
+    font-size: 16px;
+ }
+}
+  ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.4);
+      text-align: center;
+}
+  li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+}
+</style>
+
+</head>
+
+<body>
+    <ul>
+<button onclick=noodles()>Noodles and Ramens</button></li>
+<button onclick=sushimi()>Sushi and Sashimi</button></li>
+<button onclick=desserts()>Desserts</button></li>
+</ul>
+
+<h1>Izakaya (居酒屋)</h1>
+<h2>  A Japanese Catery & Bar </h2>
+
+<div id="japan"></div>
+
+<script>
+
+noodlesImages = [ 'url("https://www.errenskitchen.com/wp-content/uploads/2014/04/quick-and-easy-chinese-noodle-soup3-1.jpg")',
+
+'url("https://confessionsofafitfoodie.com/wp-content/uploads/2018/02/Instant-Pot-Ramen-Noodles-.jpg")',
+
+'url("https://inquiringchef.com/wp-content/uploads/2016/10/Chicken-Ramen-Noodle-Bowl-3.jpg")'
+]
+
+sushimiImages = [ 'url("https://thisonevsthatone.com/wp-content/uploads/Sashimi-with-daikon-and-shiso.jpg")',
+
+'url("https://d3d7qmccklvqbw.cloudfront.net/wp-content/uploads/2017/12/sashimi-resized.jpg")',
+
+'url("http://justhungry.com/files/images/sushiexample.jpg")'
+]
+
+dessertImages = [ 'url("https://cdn001.cakecentral.com/gallery/2015/02/900_640057dklP_asian-themed-cupcakes.jpg")',
+
+'url("https://i1.wp.com/www.forktobelly.com/wp-content/uploads/2016/05/kittyanpan-64.jpg?resize=863%2C576")',
+
+'url("https://www.preparedfoods.com/ext/resources/ISSUES/pfx0114plant3_feat.jpg")'
+]
+
+noodlesDivs = ['<div class="item" onclick=this.classList.toggle("show-description")><p>Noodles<span class="price"> $16</span></br><small>Stretchy unvealed dough rolled and toughened to perfection! Add some with soup and maybe a potato mochi or dumpling!</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Ramen<span class="price"> $24</span></br><small>Fresh noodles heated to perfection with small veggies, meat, and a boiled egg for taste! Culture, yum...</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Veggie Noodles<span class="price"> $9</span></br><small>Besides, you look like you really really need to go on a diet (No Offense, just advice) look just try this for a few times and you are good...</small></p></div>'
+]
+
+sushimiDivs = ['<div class="item" onclick=this.classList.toggle("show-description")><p>Sashimi<span class="price"> $11</span></br><small>What are you doing?! Those fishies were so innocent, you monster! I was kidding, hehe...no?..ok ._.</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Sashimi with Salmon<span class="price"> $9</span></br><small>Fishing is different than catching fish by hand...or is it? Maybe? No? If not, then try this dish, it reallly suits your inner zen</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Sushi<span class="price"> $15</span></br><small>Fish and rice is good, but fish and rice rolled toghether with shrimp, salmon and veggies in a nori?...better</small></p></div>'
+]
+
+dessertDivs = ['<div class="item" onclick=this.classList.toggle("show-description")><p>Asian-themed Cupcakes<span class="price"> $16</span></br><small>These frosting topped cupcakes are just what you need to end a nice meal! I like the panda by the way...</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Anpan Kitty<span class="price"> $5</span></br><small>If you are truly a cat person, then kids and yourself should like this bean paste filled pastry. One wont hurt right?</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Ice Cream<span class="price"> $8</span></br><small>Kids love, we love it, and we scream for it...Whats your favorite flavor? Mines chocolate cookies and cream.</small></p></div>'
+]
+
+function noodles() {
+  items = document.getElementById("japan")
+  items.innerHTML = ''
+  items.innerHTML += noodlesDivs[0]
+  items.innerHTML += noodlesDivs[1]
+  items.innerHTML += noodlesDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+    items[i].style.background = noodlesImages[i]
+    items[i].style.backgroundSize = '100% 100%'
+  }
+}
+
+function sushimi() {
+  items = document.getElementById("japan")
+  items.innerHTML = ''
+  items.innerHTML += sushimiDivs[0]
+  items.innerHTML += sushimiDivs[1]
+  items.innerHTML += sushimiDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+    items[i].style.background = sushimiImages[i]
+    items[i].style.backgroundSize = '100% 100%'
+  }
+}
+  
+function desserts() {
+  items = document.getElementById("japan")
+  items.innerHTML = ''
+  items.innerHTML += dessertDivs[0]
+  items.innerHTML += dessertDivs[1]
+  items.innerHTML += dessertDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+    items[i].style.background = dessertImages[i]
+    items[i].style.backgroundSize = '100% 100%'
+  }
+}
+
+</script>
+</body>
