@@ -107,6 +107,7 @@ small {
 <button onclick=noodles()>Noodles and Ramens</button></li>
 <button onclick=sushimi()>Sushi and Sashimi</button></li>
 <button onclick=desserts()>Desserts</button></li>
+<buuton onclick=drinks()>Drinks and Beverages</button></li>
 </ul>
 
 <h1>Izakaya (居酒屋)</h1>
@@ -136,6 +137,9 @@ dessertImages = [ 'url("https://cdn001.cakecentral.com/gallery/2015/02/900_64005
 
 'url("https://www.preparedfoods.com/ext/resources/ISSUES/pfx0114plant3_feat.jpg")'
 ]
+  
+drinksImages = [ 'url("https://favy-inbound-singapore.s3.amazonaws.com/uploads/topic_item/image/38088/retina_pixta_25262119_S.jpg")',http://jpninfo.com/wp-content/uploads/2016/02/matcha-feat.jpg")'
+]
 
 noodlesDivs = ['<div class="item" onclick=this.classList.toggle("show-description")><p>Noodles<span class="price"> $16</span></br><small>Stretchy unvealed dough rolled and toughened to perfection! Add some with soup and maybe a potato mochi or dumpling!</small></p></div>',
 
@@ -157,6 +161,8 @@ dessertDivs = ['<div class="item" onclick=this.classList.toggle("show-descriptio
 
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Ice Cream<span class="price"> $8</span></br><small>Kids love, we love it, and we scream for it...Whats your favorite flavor? Mines chocolate cookies and cream.</small></p></div>'
 ]
+  
+drinksDivs =[]
 
 function noodles() {
   items = document.getElementById("japan")
@@ -196,6 +202,17 @@ function desserts() {
     items[i].style.backgroundSize = '100% 100%'
   }
 }
+  
+function drinks() {
+  items = document.getElementById("japan")
+  items.innerHTML = ''
+  items.innerHTML += drinksDivs[0]
+  items.innerHTML += drinksDivs[1]
+  items.innerHTML += drinksDivs[2]
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+    items[i].style.background = dessertImages[i]
+    items[i].style.backgroundSize = '100% 100%'
 
 </script>
 </body>
