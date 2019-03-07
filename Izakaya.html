@@ -140,6 +140,8 @@ dessertImages = [ 'url("https://cdn001.cakecentral.com/gallery/2015/02/900_64005
   
 drinksImages = [ 'url("https://favy-inbound-singapore.s3.amazonaws.com/uploads/topic_item/image/38088/retina_pixta_25262119_S.jpg")',http://jpninfo.com/wp-content/uploads/2016/02/matcha-feat.jpg")'
 ]
+  
+ 
 
 noodlesDivs = ['<div class="item" onclick=this.classList.toggle("show-description")><p>Noodles<span class="price"> $16</span></br><small>Stretchy unvealed dough rolled and toughened to perfection! Add some with soup and maybe a potato mochi or dumpling!</small></p></div>',
 
@@ -211,7 +213,7 @@ function drinks() {
   items.innerHTML += drinksDivs[2]
   items = document.getElementsByClassName("item")
   for (i=0; i<3; i=i+1) {
-    items[i].style.background = dessertImages[i]
+    items[i].style.background = drinksImages[i]
     items[i].style.backgroundSize = '100% 100%'
 
 </script>
