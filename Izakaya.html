@@ -138,7 +138,11 @@ dessertImages = [ 'url("https://cdn001.cakecentral.com/gallery/2015/02/900_64005
 'url("https://www.preparedfoods.com/ext/resources/ISSUES/pfx0114plant3_feat.jpg")'
 ]
   
-drinksImages = [ 'url("https://favy-inbound-singapore.s3.amazonaws.com/uploads/topic_item/image/38088/retina_pixta_25262119_S.jpg")',http://jpninfo.com/wp-content/uploads/2016/02/matcha-feat.jpg")'
+drinksImages = [ 'url("https://favy-inbound-singapore.s3.amazonaws.com/uploads/topic_item/image/38088/retina_pixta_25262119_S.jpg")',
+
+'url("http://jpninfo.com/wp-content/uploads/2016/02/matcha-feat.jpg")'
+                
+ 'url("https://thumbor.thedailymeal.com/OL2kpzLRKUPrAo-8sbvYX01CIQo=//https://videodam-assets.thedailymeal.com/filestore/1/1/6/7_9ee6dedf97dd233/kraken_20130401121122_1167pre_11f01f9756ae415.jpg%3Fv=2013-04-01+12%3A11%3A22&version=0")'
 ]
   
  
@@ -164,8 +168,9 @@ dessertDivs = ['<div class="item" onclick=this.classList.toggle("show-descriptio
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Ice Cream<span class="price"> $8</span></br><small>Kids love, we love it, and we scream for it...Whats your favorite flavor? Mines chocolate cookies and cream.</small></p></div>'
 ]
   
-drinksDivs =[]
-
+drinksDivs =['<div class="item" onclick=this.classList.toggle("show-description")><p>Sake<span class="price"> $9</span></br><small>Most people like rice and wine...but have you tried this japenese rice wine before? You should, just not a lot, it really gets poppin...</small></p></div>','<div class="item" onclick=this.classList.toggle("show-description")><p>Green Tea<span class="price"> $9</span></br><small>Coffe or Green Tea? Coffee or Green Tea?...let me know when you get the reference.. :3</small></p></div>','<div class="item" onclick=this.classList.toggle("show-description")><p>Ramune<span class="price"> $9</span></br><small>Its actually japanese soda, but with fruit flavors waiting to be ingested! Feels good inside...huh?</small></p></div>'
+]
+  
 function noodles() {
   items = document.getElementById("japan")
   items.innerHTML = ''
@@ -215,6 +220,8 @@ function drinks() {
   for (i=0; i<3; i=i+1) {
     items[i].style.background = drinksImages[i]
     items[i].style.backgroundSize = '100% 100%'
+  }
+}
 
 </script>
 </body>
