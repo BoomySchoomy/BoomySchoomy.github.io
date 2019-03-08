@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   max-width: 600px;
   background: #000 url("https://kid101.com/wp-content/uploads/2017/03/cherry-blossoms-houston.jpg");
-  background-size: 3000px;
+  background-size: 4000px;
 }
 div {
   height: 400px;
@@ -53,20 +53,16 @@ small {
   color: #D65B9D;
   opacity: 0;
 }
-
 .show-description p {
   height: 150px;
 }
-
 .show-description small {
   opacity: 1;
 }
-
 }
 .price {
   float: right;
 }
-
 @media (max-width:500px) { 
   h1 {
     font-size: 50px;
@@ -116,59 +112,57 @@ small {
 <div id="japan"></div>
 
 <script>
-
 noodlesImages = [ 'url("https://www.errenskitchen.com/wp-content/uploads/2014/04/quick-and-easy-chinese-noodle-soup3-1.jpg")',
-
 'url("https://confessionsofafitfoodie.com/wp-content/uploads/2018/02/Instant-Pot-Ramen-Noodles-.jpg")',
-
-'url("https://inquiringchef.com/wp-content/uploads/2016/10/Chicken-Ramen-Noodle-Bowl-3.jpg")'
+'url("https://inquiringchef.com/wp-content/uploads/2016/10/Chicken-Ramen-Noodle-Bowl-3.jpg")',
 ]
 
 sushimiImages = [ 'url("https://thisonevsthatone.com/wp-content/uploads/Sashimi-with-daikon-and-shiso.jpg")',
-
 'url("https://d3d7qmccklvqbw.cloudfront.net/wp-content/uploads/2017/12/sashimi-resized.jpg")',
-
-'url("http://justhungry.com/files/images/sushiexample.jpg")'
+'url("http://justhungry.com/files/images/sushiexample.jpg")',
 ]
 
 dessertImages = [ 'url("https://cdn001.cakecentral.com/gallery/2015/02/900_640057dklP_asian-themed-cupcakes.jpg")',
-
 'url("https://i1.wp.com/www.forktobelly.com/wp-content/uploads/2016/05/kittyanpan-64.jpg?resize=863%2C576")',
-
-'url("https://www.preparedfoods.com/ext/resources/ISSUES/pfx0114plant3_feat.jpg")'
+'url("https://www.preparedfoods.com/ext/resources/ISSUES/pfx0114plant3_feat.jpg")',
 ]
   
 drinksImages = [ 'url("https://favy-inbound-singapore.s3.amazonaws.com/uploads/topic_item/image/38088/retina_pixta_25262119_S.jpg")',
 
-'url("http://jpninfo.com/wp-content/uploads/2016/02/matcha-feat.jpg")'
-                
- 'url("https://cdn.triplelights.com/uploads/2019-01/szt9kxwq_toumyou-sec04-img011.jpg)'
+'url("http://jpninfo.com/wp-content/uploads/2016/02/matcha-feat.jpg")',
+                 'url("https://media-cdn.tripadvisor.com/media/photo-s/0e/d7/1e/38/ramune-japanese-lemonade.jpg")',
+				 
+'url("https://cdn.shopify.com/s/files/1/0586/5017/products/amazake-gan-jiu-airflownonly-drink-japan-japanese-tea-air-flown-only-zairyo-singapore_136_1024x1024.jpg?v=1538409064")',
 ]
   
- 
 
 noodlesDivs = ['<div class="item" onclick=this.classList.toggle("show-description")><p>Noodles<span class="price"> $16</span></br><small>Stretchy unvealed dough rolled and toughened to perfection! Add some with soup and maybe a potato mochi or dumpling!</small></p></div>',
 
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Ramen<span class="price"> $24</span></br><small>Fresh noodles heated to perfection with small veggies, meat, and a boiled egg for taste! Culture, yum...</small></p></div>',
 
-'<div class="item" onclick=this.classList.toggle("show-description")><p>Veggie Noodles<span class="price"> $9</span></br><small>Besides, you look like you really really need to go on a diet (No Offense, just advice) look just try this for a few times and you are good...</small></p></div>'
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Veggie Noodles<span class="price"> $9</span></br><small>Besides, you look like you really really need to go on a diet (No Offense, just advice) look just try this for a few times and you are good...</small></p></div>',
 ]
-
 sushimiDivs = ['<div class="item" onclick=this.classList.toggle("show-description")><p>Sashimi<span class="price"> $11</span></br><small>What are you doing?! Those fishies were so innocent, you monster! I was kidding, hehe...no?..ok ._.</small></p></div>',
 
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Sashimi with Salmon<span class="price"> $9</span></br><small>Fishing is different than catching fish by hand...or is it? Maybe? No? If not, then try this dish, it reallly suits your inner zen</small></p></div>',
 
-'<div class="item" onclick=this.classList.toggle("show-description")><p>Sushi<span class="price"> $15</span></br><small>Fish and rice is good, but fish and rice rolled toghether with shrimp, salmon and veggies in a nori?...better</small></p></div>'
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Sushi<span class="price"> $15</span></br><small>Fish and rice is good, but fish and rice rolled toghether with shrimp, salmon and veggies in a nori?...better</small></p></div>',
 ]
 
 dessertDivs = ['<div class="item" onclick=this.classList.toggle("show-description")><p>Asian-themed Cupcakes<span class="price"> $16</span></br><small>These frosting topped cupcakes are just what you need to end a nice meal! I like the panda by the way...</small></p></div>',
 
 '<div class="item" onclick=this.classList.toggle("show-description")><p>Anpan Kitty<span class="price"> $5</span></br><small>If you are truly a cat person, then kids and yourself should like this bean paste filled pastry. One wont hurt right?</small></p></div>',
 
-'<div class="item" onclick=this.classList.toggle("show-description")><p>Ice Cream<span class="price"> $8</span></br><small>Kids love, we love it, and we scream for it...Whats your favorite flavor? Mines chocolate cookies and cream.</small></p></div>'
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Ice Cream<span class="price"> $8</span></br><small>Kids love, we love it, and we scream for it...Whats your favorite flavor? Mines chocolate cookies and cream.</small></p></div>',
 ]
   
-drinksDivs =['<div class="item" onclick=this.classList.toggle("show-description")><p>Sake<span class="price"> $9</span></br><small>Most people like rice and wine...but have you tried this japenese rice wine before? You should, just not a lot, it really gets poppin...</small></p></div>','<div class="item" onclick=this.classList.toggle("show-description")><p>Green Tea<span class="price"> $9</span></br><small>Coffe or Green Tea? Coffee or Green Tea?...let me know when you get the reference.. :3</small></p></div>','<div class="item" onclick=this.classList.toggle("show-description")><p>Ramune<span class="price"> $9</span></br><small>Its actually japanese soda, but with fruit flavors waiting to be ingested! Feels good inside...huh?</small></p></div>'
+drinksDivs =['<div class="item" onclick=this.classList.toggle("show-description")><p>Sake<span class="price"> $20</span></br><small>Most people like rice and wine...but have you tried this japenese rice wine before? You should, just not a lot, it really gets poppin...</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Green Tea<span class="price"> $11</span></br><small>Coffee or Green Tea? Coffee or Green Tea?...let me know when you get the reference.. :3 (is an anime...)</small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Ramune<span class="price"> $7</span></br><small>Its actually japanese lemonade, but with many fruit flavors waiting to be drinked up!  Put in fridge for best sensation! </small></p></div>',
+
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Amazake<span class="price"> $10</span></br><small>Its rice fermented and stir into a liquid added with water in a cup...we were not expecting this...or that... XD </small></p></div>',
 ]
   
 function noodles() {
@@ -183,7 +177,6 @@ function noodles() {
     items[i].style.backgroundSize = '100% 100%'
   }
 }
-
 function sushimi() {
   items = document.getElementById("japan")
   items.innerHTML = ''
@@ -216,8 +209,9 @@ function drinks() {
   items.innerHTML += drinksDivs[0]
   items.innerHTML += drinksDivs[1]
   items.innerHTML += drinksDivs[2]
+  items.innerHTML += drinksDivs[3]
   items = document.getElementsByClassName("item")
-  for (i=0; i<3; i=i+1) {
+  for (i=0; i<4; i=i+1) {
     items[i].style.background = drinksImages[i]
     items[i].style.backgroundSize = '100% 100%'
   }
