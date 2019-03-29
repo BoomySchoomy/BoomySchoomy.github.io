@@ -502,7 +502,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-container .background {
-  min-height: 275px;
+  min-height: 375px;
   background: url(https://static1.squarespace.com/static/5601a1b1e4b03c71ce76901d/561d5cc0e4b0e681f078a519/5a282cd5ec212dca4e7d5c8e/1526922655006/ps4+controller.jpg?format=500w) center top no-repeat;
   margin-bottom: 10px;
 }
